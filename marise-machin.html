@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CALCULADORA QUÂNTICA - GUILA</h1>
+
+    <label class="container">
+        <p>Selecione a base do seu numero:</p>
+        <select  class="botao" id="select_base">
+            <option value="#">Selecione a base</option>
+            <option value="2">Binário</option>
+            <option value="10">Decimal</option>
+            <option value="8">Octal</option>
+            <option value="16" id="select_hexa">Hexadecimal</option>
+        </select>
+    </label><br>
+
+    <label class="container">
+    <p>Insira o número para conversão:</p>
+    <input class="input" type="text" id="input_numero"><br>
+    <button class="botao" onclick="converter()">Converta</button>
+    </label>
+    <div class="container"id="divMensagem"></div>
+
+</body>
+<script>
+    function converter() {
+        var base = Number(select_base.value);
+        var numero = Number(input_numero.value);
+        var decimal = 0;
+        var octal = 0;
+        var hexadecimal = 0;
+        var binaria = 0;
+
+        if (base == 2) {
+            devolveDec = parseInt(numero, base);       
+            decimal = devolveDec     
+            octal = decimal.toString(8);
+            hexadecimal = decimal.toString(16).toUpperCase();
+
+            divMensagem.innerHTML = `Decimal: ${decimal}<br> Octal: ${octal}<br> Hexadecimal: ${hexadecimal}`
+        }
+        else if (base == 10){
+            devolveDec = parseInt(numero, base);       
+            decimal = devolveDec     
+            octal = decimal.toString(8);
+            hexadecimal = decimal.toString(16).toUpperCase();
+            binaria = decimal.toString(2);
+            divMensagem.innerHTML = `Binário: ${binaria}<br>Octal ${octal}<br>Hexadecimal: ${hexadecimal}`
+        }
+        else if (base == 8){
+            devolveDec = parseInt(numero, base);       
+            decimal = devolveDec     
+            octal = decimal.toString(8);
+            hexadecimal = decimal.toString(16).toUpperCase();
+            binaria = decimal.toString(2);
+            divMensagem.innerHTML = `Binário: ${binaria}<br>Decimal: ${decimal}<br>Hexadecimal: ${hexadecimal}`
+        }
+        else if (base == 16) {
+            devolveDec = parseInt(numero, base);       
+            decimal = devolveDec     
+            octal = decimal.toString(8);
+            hexadecimal = decimal.toString(16).toUpperCase();
+            binaria = decimal.toString(2);
+            divMensagem.innerHTML = `Binário: ${binaria}<br> Decimal:${decimal}<br> Octal:${octal}`
+        }
+
+    }
+</script>
+
+</html>

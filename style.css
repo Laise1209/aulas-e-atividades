@@ -1,0 +1,38 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: green;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.botao{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.input{
+    cursor: text;
+    transition: 0.5 ease-in-out;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+
+
+button{ animation: pulse 2s infinite}
+@keyframes pulse{
+    0%, 100% {transform: scale(1);}
+    50%{transform: scale(1.2);}
+}
